@@ -1,0 +1,190 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    background: #ececec;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.side-image {
+    flex: 1;
+    background-image: url('/images/IMG_0377.JPG'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: bold;
+    text-align: center;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 330px;
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-box img {
+    height: 80px;
+    display: block;
+    width: 290px;
+    padding: 15px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input {
+    height: 45px;
+    width: 80%;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding: 0 5px;
+    color: #40414a;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    pointer-events: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -10px;
+    font-size: 12px;
+    color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.signup {
+    border: none;
+    outline: none;
+    height: 45px;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.signup {
+    background: #255f9ce6;
+    color: #fff;
+}
+
+.signup:hover {
+    background: rgba(37, 95, 156, 1);
+}
+
+.submit {
+    background: #255f9ce6;
+    color: #fff;
+}
+
+.submit:hover {
+    background: rgba(37, 95, 156, 1);
+}
+
+.signin {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+.signin a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: 0.5s;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        max-width: 420px;
+        height: auto;
+    }
+
+    .side-image {
+        border-radius: 10px 10px 0 0;
+        height: 200px;
+    }
+
+    .right {
+        padding: 20px;
+    }
+
+    .text {
+        top: 60%;
+        font-size: 16px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
